@@ -217,7 +217,7 @@ ul {
     position: relative;
 }
 
-.landing .overlay {
+.overlay {
     position: absolute;
     background-color: rgb(0 0 0 / 50%);
     top: 0;
@@ -239,6 +239,10 @@ ul {
     justify-content: flex-end;
     color: white;
     transition: width 0.5s ease, padding 0.5s ease;
+    -webkit-transition: width 0.5s ease, padding 0.5s ease;
+    -moz-transition: width 0.5s ease, padding 0.5s ease;
+    -ms-transition: width 0.5s ease, padding 0.5s ease;
+    -o-transition: width 0.5s ease, padding 0.5s ease;
 }
 
 @media (max-width: 945px) {
@@ -310,6 +314,10 @@ ul {
 /* end landing */
 
 /* start services */
+.services {
+    margin-bottom: 50px;
+}
+
 .main-heading {
     text-align: center;
 }
@@ -423,6 +431,156 @@ ul {
 
 }
 
-
-
 /* end services */
+
+/* start design section  */
+.design .design-background-image {
+    position: relative;
+    height: 600px;
+    background-image: url("../images/design-features.jpg");
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+.design-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.design-content img {
+    position: absolute;
+    top: -50px;
+    left: 10%;
+}
+
+.design-content .text {
+    position: absolute;
+    right: 0;
+    min-height: 50%;
+    width: 50%;
+    background-color: var(--transparent-color);
+    padding: 50px 50px 50px 50px;
+    transition: width 0.5s ease, padding 0.5s ease;
+    -webkit-transition: width 0.5s ease, padding 0.5s ease;
+    -moz-transition: width 0.5s ease, padding 0.5s ease;
+    -ms-transition: width 0.5s ease, padding 0.5s ease;
+    -o-transition: width 0.5s ease, padding 0.5s ease;
+}
+
+@media (max-width: 945px) {
+    .design-content .text {
+        line-height: 2;
+        width: 100%;
+        padding: 70px;
+    }
+}
+
+.design-content .text h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.design-content .text li {
+    margin-bottom: 20px;
+}
+
+.design-content .text li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+}
+
+/* end design section  */
+
+/* start portfolio section */
+.shuffle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.shuffle li {
+    padding: 10px 20px;
+}
+
+.shuffle li[class=active] {
+    color: white;
+    background-color: var(--main-color);
+}
+
+.images-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.images-container .box {
+    position: relative;
+    flex-basis: 25%;
+    overflow: hidden;
+    transition: flex-basis 0.5s ease;
+}
+
+.images-container img {
+    max-width: 100%;
+    transition: transform 0.5s;
+}
+
+.images-container .caption {
+    padding: 20px;
+    position: absolute;
+    background-color: white;
+    z-index: 2;
+    bottom: -100%;
+    width: 100%;
+    transition: bottom 0.5s;
+}
+
+.images-container .box:hover .caption {
+    bottom: 0;
+}
+
+.images-container .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+@media (max-width: 945px) {
+    .images-container .box {
+        flex-basis: 50%;
+        transition: flex-basis 0.5s ease;
+    }
+}
+
+@media (max-width: 767px) {
+    .images-container .box {
+        flex-basis: 100%;
+        transition: flex-basis 0.5s ease;
+    }
+}
+
+.portfolio .more {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* end portfolio section */
